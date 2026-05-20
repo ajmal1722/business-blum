@@ -1,4 +1,5 @@
 import Container from "@/components/Ui/Container";
+import SectionHeading from "@/components/Ui/SectionHeading";
 import {
     FileText,
     Search,
@@ -35,23 +36,18 @@ const HowItWorks = () => {
             {/* Grid Background */}
             <div
                 className="
-          absolute inset-0
-          bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)]
-          bg-size-[60px_60px] opacity-50
-        "
+                    absolute inset-0
+                    bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)]
+                    bg-size-[60px_60px] opacity-50
+                "
             />
 
             <Container className="relative z-10">
                 {/* Heading */}
-                <div className="mx-auto max-w-3xl text-center">
-                    <h2 className="text-secondary text-5xl font-extrabold md:text-6xl">
-                        How It Works
-                    </h2>
-
-                    <p className="text-muted mt-6 text-xl md:text-2xl">
-                        Get matched with lenders in three simple steps
-                    </p>
-                </div>
+                <SectionHeading
+                    title="How It Works"
+                    description="Get matched with lenders in three simple steps"
+                />
 
                 {/* Cards */}
                 <div className="relative mt-20 grid gap-8 lg:grid-cols-3">
