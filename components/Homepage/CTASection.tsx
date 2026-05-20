@@ -25,7 +25,7 @@ const features = [
 
 const CTASection = () => {
     return (
-        <section className="relative overflow-hidden bg-[#0f172a] py-32">
+        <section className="relative overflow-hidden bg-primary py-32">
             {/* Gradient Glow */}
             <div
                 className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(8,151,106,0.45),transparent_45%)]"
