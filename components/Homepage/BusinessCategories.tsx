@@ -39,7 +39,7 @@ const BusinessCategories = () => {
     };
 
     return (
-        <section className="overflow-hidden bg-surface py-28">
+        <section className="overflow-hidden py-28">
             <Container>
                 {/* Heading */}
                 <SectionHeading
