@@ -1,8 +1,11 @@
+import Container from "@/components/Ui/Container";
+import Button from "@/components/Ui/Button";
 
 export default function Home() {
   return (
-    <div className="text-background bg-success">
+    <Container className="w-full">
       Hello world
-    </div>
+      <Button>Apply now</Button>
+    </Container>
   );
 }
