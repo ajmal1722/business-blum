@@ -49,7 +49,7 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="w-full shadow-sm">
+        <header className="w-full shadow-sm bg-background fixed top-0 left-0 right-0 z-50">
             <Container className="flex items-center justify-between py-4">
                 {/* Logo */}
                 <Link
