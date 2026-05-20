@@ -3,6 +3,8 @@ import SectionHeading from "@/components/Ui/SectionHeading";
 import WhyChooseImageContainer from "./WhyChoseImageContainer";
 import image1 from "@/assets/images/homepage/why-choose-1.jpg";
 import image2 from "@/assets/images/homepage/why-choose-2.jpg";
+import features from "@/data/featuresData";
+import WhyCooseFeaturesCard from "./WhyCooseFeaturesCard";
 
 import { Star } from "lucide-react";
 
@@ -119,6 +121,18 @@ const WhyChoose = () => {
                         title="Cutting-Edge Technology"
                         description="Smart matching algorithms"
                     />
+                </div>
+
+                {/* Features Card */}
+                <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    {features.map((feature) => (
+                        <WhyCooseFeaturesCard
+                            key={feature.title}
+                            icon={feature.icon}
+                            title={feature.title}
+                            description={feature.description}
+                        />
+                    ))}
                 </div>
             </Container>
         </section>
