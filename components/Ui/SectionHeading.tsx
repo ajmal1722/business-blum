@@ -20,7 +20,7 @@ const SectionHeading = ({
     return (
         <div
             className={cn(
-                "max-w-3xl",
+                "max-w-6xl",
                 centered && "mx-auto text-center",
                 className
             )}
