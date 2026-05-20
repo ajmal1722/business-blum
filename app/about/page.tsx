@@ -1,8 +1,13 @@
-import React from 'react'
+import PageHero from '@/components/Shared/PageHero';
 
 const AboutPage = () => {
     return (
-        <div>page</div>
+        <div>
+            <PageHero
+                title='About Business Blum'
+                description='Revolutionizing how businesses access capital through smart technology and human expertise'
+            />
+        </div>
     )
 }
 
