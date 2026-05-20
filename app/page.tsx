@@ -2,6 +2,7 @@ import Hero from "@/components/Homepage/Hero";
 import HowItWorks from "@/components/Homepage/HowItWorks";
 import BusinessCategories from "@/components/Homepage/BusinessCategories";
 import WhyChoose from "@/components/Homepage/WhyChooseUs";
+import Testimonials from "@/components/Homepage/Testimonials";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HowItWorks />
       <BusinessCategories />
       <WhyChoose />
+      <Testimonials />
     </>
   );
 }
