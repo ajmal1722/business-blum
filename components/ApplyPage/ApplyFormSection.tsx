@@ -136,8 +136,10 @@ const ApplyFormSection = () => {
                     onSubmit={handleSubmit}
                     onChange={handleChange}
                     noValidate
-                    className="mx-auto max-w-4xl rounded-3xl border border-border bg-white p-6 shadow-[0_15px_50px_rgba(0,0,0,0.08)] md:p-10 lg:p-14"
+                    className="mx-auto relative overflow-hidden max-w-4xl rounded-3xl border border-border bg-white p-6 shadow-md md:p-10 lg:p-14"
                 >
+                    {/* Top Accent */}
+                    <div className="bg-success absolute inset-x-0 top-0 h-2" />
                     <ApplyTopBanner />
 
                     <ApplyBasicInfo errors={errors} />
