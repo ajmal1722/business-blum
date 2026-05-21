@@ -21,10 +21,11 @@ const AboutPage = () => {
             <LeadershipTeamSection />
             <CoreValues />
             <WhatMakesUsDifferent />
-            <PageCTA 
+            <PageCTA
                 title="Join 50,000+ Businesses We've Helped"
                 description="Experience the Business Blum difference. Apply now and get matched with the right lenders for your business."
                 buttonText="Start Your Application"
+                link="/apply"
             />
         </div>
     )

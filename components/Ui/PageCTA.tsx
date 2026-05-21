@@ -16,6 +16,7 @@ interface PageCTAProps {
     description: string;
     buttonText?: string;
     features?: CTAFeature[];
+    link: string;
 }
 
 const PageCTA = ({
@@ -23,6 +24,7 @@ const PageCTA = ({
     description,
     buttonText = "Get Started",
     features,
+    link,
 }: PageCTAProps) => {
     return (
         <section className="relative overflow-hidden bg-primary py-32">
@@ -56,7 +58,7 @@ const PageCTA = ({
 
                     {/* CTA Button */}
                     <div className="mt-10">
-                        <Button className="bg-success hover:bg-success/90 inline-flex items-center gap-3 px-10 py-5 text-xl font-semibold">
+                        <Button href={link} className="bg-success hover:bg-success/90 inline-flex items-center gap-3 px-10 py-5 text-xl font-semibold">
                             {buttonText}
 
                             <ArrowRight

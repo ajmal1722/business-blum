@@ -16,7 +16,7 @@ import {
 
 const ApplyFormSection = () => {
     return (
-        <section className="relative z-20 -mt-24 pb-20 lg:-mt-24 lg:pb-28">
+        <section className="relative z-20 -mt-16 pb-20 lg:-mt-24 lg:pb-28">
             <Container>
                 <div className="mx-auto max-w-4xl rounded-3xl border border-border bg-white p-6 shadow-[0_15px_50px_rgba(0,0,0,0.08)] md:p-10 lg:p-14">
                     {/* Top Funding Banner */}
@@ -49,9 +49,7 @@ const ApplyFormSection = () => {
 
                     {/* Basic Business Information */}
                     <div className="mt-14">
-                        <h3 className="text-xl font-extrabold text-primary lg:text-3xl">
-                            Basic Business Information
-                        </h3>
+                        <SectionTitle title="Basic Business Information" />
 
                         <div className="mt-8 space-y-7">
                             <FormField
@@ -132,9 +130,7 @@ const ApplyFormSection = () => {
 
                     {/* Owner Information */}
                     <div>
-                        <h3 className="text-xl font-extrabold text-primary lg:text-3xl">
-                            Owner Information
-                        </h3>
+                        <SectionTitle title="Owner Information" />
 
                         <div className="mt-8 space-y-7">
                             <div className="grid gap-7 lg:grid-cols-2">
@@ -197,9 +193,7 @@ const ApplyFormSection = () => {
 
                     {/* Funding Needs */}
                     <div>
-                        <h3 className="text-xl font-extrabold text-primary lg:text-3xl">
-                            Funding Needs
-                        </h3>
+                        <SectionTitle title="Funding Needs" />
 
                         <div className="mt-8 space-y-7">
                             <div className="grid gap-7 lg:grid-cols-2">
@@ -241,9 +235,7 @@ const ApplyFormSection = () => {
 
                     {/* Authorization */}
                     <div>
-                        <h3 className="text-xl font-extrabold text-primary lg:text-3xl">
-                            Authorization
-                        </h3>
+                        <SectionTitle title="Authorization" />
 
                         <div className="mt-8 space-y-6">
                             {authorizations.map((item) => (
@@ -272,9 +264,7 @@ const ApplyFormSection = () => {
 
                     {/* Documents */}
                     <div>
-                        <h3 className="text-xl font-extrabold text-primary lg:text-3xl">
-                            Documents You May Need
-                        </h3>
+                        <SectionTitle title="Documents You May Need" />
 
                         <div className="mt-8 rounded-xl border border-blue-200 bg-blue-50 p-8">
                             <p className="text-secondary font-semibold leading-relaxed">
@@ -329,8 +319,14 @@ const ApplyFormSection = () => {
                     {/* CTA */}
                     <Button className="mt-10 h-16 w-full rounded-xl text-xl font-bold flex items-center justify-center gap-1">
                         Get Matched with 200+ Lenders
-                        <ArrowRight className="ml-2 size-6" strokeWidth={2.2}/>
+                        <ArrowRight className="ml-2 size-6" strokeWidth={2.2} />
                     </Button>
+
+                    {/* Footer Text */}
+                    <p className="text-muted mt-8 text-center text-sm">
+                        By submitting this form, you agree to our Privacy
+                        Policy and Terms of Service.
+                    </p>
                 </div>
             </Container>
         </section>
@@ -349,7 +345,7 @@ const SectionTitle = ({
     title: string;
 }) => {
     return (
-        <h2 className="text-secondary text-3xl font-extrabold lg:text-5xl">
+        <h2 className="text-xl font-extrabold text-primary lg:text-3xl">
             {title}
         </h2>
     );

@@ -21,6 +21,7 @@ const page = () => {
                 title="Find Your Perfect Loan Match"
                 description="Our smart matching technology connects you with the right lenders based on your unique business needs and financial profile."
                 buttonText="Start Your Application"
+                link="/apply"
             />
         </div>
     )

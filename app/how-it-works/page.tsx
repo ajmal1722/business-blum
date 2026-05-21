@@ -17,6 +17,7 @@ const page = () => {
             <PageCTA
                 title="Ready to Get Started?"
                 description="Complete your application in minutes and discover lenders that fit your needs"
+                link="/apply"
             />
         </div>
     )

@@ -36,7 +36,7 @@ const ApplyHeroSection = () => {
                     </h1>
 
                     {/* Description */}
-                    <p className="mt-8 max-w-3xl text-base leading-relaxed text-gray-200 md:text-2xl">
+                    <p className="mt-4 lg:mt-8 max-w-3xl text-base leading-relaxed text-gray-200 md:text-2xl">
                         Complete our secure application and get matched
                         with 200+ lenders
                     </p>

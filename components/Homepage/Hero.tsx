@@ -51,7 +51,10 @@ const Hero = () => {
 
                     {/* CTA Buttons */}
                     <div className="mt-10 flex flex-col gap-4 sm:flex-row text-lg font-semibold">
-                        <Button className="flex items-center justify-center gap-2 px-8 py-4 hover:scale-105">
+                        <Button
+                            href="/apply"
+                            className="flex items-center justify-center gap-2 px-8 py-4 hover:scale-105"
+                        >
                             Get Started Now
 
                             <ArrowRight
@@ -60,7 +63,10 @@ const Hero = () => {
                             />
                         </Button>
 
-                        <Button className="bg-secondary px-8 py-4 hover:scale-105">
+                        <Button
+                            href="how-it-works"
+                            className="bg-secondary px-8 py-4 hover:scale-105"
+                        >
                             See How It Works
                         </Button>
                     </div>

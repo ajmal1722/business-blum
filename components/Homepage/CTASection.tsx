@@ -27,6 +27,7 @@ const CTASection = () => {
             description="Complete your application in minutes and discover lenders that fit your needs."
             buttonText="Start Application"
             features={features}
+            link="/apply"
         />
     );
 };

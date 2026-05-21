@@ -67,12 +67,12 @@ const Header = () => {
                                     <Link
                                         href={item.href}
                                         className={`
-                      relative pb-2 transition-colors
-                      ${isActive
+                                            relative pb-2 transition-colors
+                                            ${isActive
                                                 ? "text-success"
                                                 : "hover:text-success"
                                             }
-                    `}
+                                        `}
                                     >
                                         {item.label}
 
@@ -97,7 +97,7 @@ const Header = () => {
 
                 {/* Desktop CTA */}
                 <div className="hidden lg:block">
-                    <Button>
+                    <Button className="px-6" href="/apply">
                         Apply Now
                     </Button>
                 </div>
@@ -187,7 +187,7 @@ const Header = () => {
                                     })}
                                 </ul>
 
-                                <Button className="mt-6 w-full">
+                                <Button className="mt-6 w-full" href="/apply" onClick={() => setMobileMenuOpen(false)}>
                                     Apply Now
                                 </Button>
                             </nav>
