@@ -1,42 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-import { motion } from "framer-motion";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import Container from "@/components/Ui/Container";
 import SectionHeading from "@/components/Ui/SectionHeading";
-
 import { loanOptions } from "@/data/loanOptions";
-
-import {
-    ChevronLeft,
-    ChevronRight,
-} from "lucide-react";
-
-const CARD_WIDTH = 320;
-const GAP = 24;
-const STEP = CARD_WIDTH + GAP;
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const BusinessCategories = () => {
-    const [currentIndex, setCurrentIndex] =
-        useState(0);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) =>
-            prev === loanOptions.length - 4
-                ? 0
-                : prev + 1
-        );
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) =>
-            prev === 0
-                ? loanOptions.length - 4
-                : prev - 1
-        );
-    };
+    const prevRef = useRef<HTMLButtonElement>(null);
+    const nextRef = useRef<HTMLButtonElement>(null);
 
     return (
         <section className="overflow-hidden py-28">
@@ -48,92 +28,88 @@ const BusinessCategories = () => {
                 />
 
                 {/* Carousel */}
-                <div className="relative mt-20">
+                <div className="group relative mt-20">
                     {/* Left Button */}
                     <button
-                        onClick={prevSlide}
+                        ref={prevRef}
                         className="
-              absolute top-1/2 left-0 z-20
-              flex h-12 w-12 -translate-y-1/2 items-center justify-center
-              rounded-full border border-border
-              bg-background shadow-card
-              transition hover:scale-105
-            "
+                            absolute top-1/2 left-0 z-20 md:-left-6
+                            flex h-12 w-12 -translate-y-1/2 items-center justify-center
+                            rounded-full border border-border
+                            bg-background shadow-card
+                            transition hover:scale-105
+                            disabled:cursor-not-allowed disabled:opacity-50
+                        "
                     >
                         <ChevronLeft className="text-secondary h-5 w-5" />
                     </button>
 
                     {/* Right Button */}
                     <button
-                        onClick={nextSlide}
+                        ref={nextRef}
                         className="
-              absolute top-1/2 right-0 z-20
-              flex h-12 w-12 -translate-y-1/2 items-center justify-center
-              rounded-full border border-border
-              bg-background shadow-card
-              transition hover:scale-105
-            "
+                            absolute top-1/2 right-0 z-20 md:-right-6
+                            flex h-12 w-12 -translate-y-1/2 items-center justify-center
+                            rounded-full border border-border
+                            bg-background shadow-card
+                            transition hover:scale-105
+                            disabled:cursor-not-allowed disabled:opacity-50
+                        "
                     >
                         <ChevronRight className="text-secondary h-5 w-5" />
                     </button>
 
                     {/* Slider */}
-                    <div className="overflow-hidden px-16">
-                        <motion.div
-                            animate={{
-                                x:
-                                    -currentIndex *
-                                    STEP,
+                    <div className="overflow-hidden md:px-4">
+                        <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={24}
+                            breakpoints={{
+                                0: { slidesPerView: 1 },
+                                768: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                                1280: { slidesPerView: 4 },
                             }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 260,
-                                damping: 30,
+                            navigation={{
+                                prevEl: prevRef.current,
+                                nextEl: nextRef.current,
                             }}
-                            className="flex gap-6"
-                        >
-                            {loanOptions.map(
-                                (loan) => (
-                                    <LoanCard
-                                        key={loan.title}
-                                        title={
-                                            loan.title
-                                        }
-                                        description={
-                                            loan.description
-                                        }
-                                        icon={
-                                            loan.icon
-                                        }
-                                    />
-                                )
-                            )}
-                        </motion.div>
-                    </div>
+                            pagination={{
+                                clickable: true,
+                                bulletClass:
+                                    "swiper-pagination-bullet !h-2 !w-2 !bg-border !opacity-100",
+                                bulletActiveClass:
+                                    "swiper-pagination-bullet-active !bg-success",
+                            }}
+                            onBeforeInit={(swiper) => {
+                                // Connect refs before initialization for navigation to work
+                                if (
+                                    typeof swiper.params.navigation !==
+                                    "boolean" &&
+                                    swiper.params.navigation
+                                ) {
+                                    swiper.params.navigation.prevEl =
+                                        prevRef.current;
 
-                    {/* Indicators */}
-                    <div className="mt-10 flex justify-center gap-2">
-                        {Array.from({
-                            length:
-                                loanOptions.length - 3,
-                        }).map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() =>
-                                    setCurrentIndex(
-                                        index
-                                    )
+                                    swiper.params.navigation.nextEl =
+                                        nextRef.current;
                                 }
-                                className={`
-                  h-1.5 w-1.5 rounded-full transition-all
-                  ${currentIndex ===
-                                        index
-                                        ? "bg-secondary scale-125"
-                                        : "bg-border"
-                                    }
-                `}
-                            />
-                        ))}
+                            }}
+                            className="py-4! pb-14!"
+                        >
+                            {loanOptions.map((loan, index) => (
+                                <SwiperSlide
+                                    key={`${loan.title}-${index}`}
+                                    className="h-auto"
+                                >
+                                    <LoanCard
+                                        title={loan.title}
+                                        description={loan.description}
+                                        icon={loan.icon}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </Container>
@@ -157,22 +133,19 @@ const LoanCard = ({
     return (
         <article
             className="
-        relative min-w-[320px]
-        rounded-lg border border-border
-        bg-background p-8
-        shadow-card
-      "
+                relative h-full w-full overflow-hidden rounded-lg
+                border border-border bg-background p-8 shadow-card
+            "
         >
             {/* Top Accent */}
-            <div className="bg-success absolute inset-x-0 top-0 h-1.5 rounded-lg" />
+            <div className="bg-success absolute inset-x-0 top-0 h-1.5" />
 
             {/* Icon */}
             <div
                 className="
-          bg-success/10 text-success
-          mb-8 w-fit p-3 flex items-center justify-center
-          rounded-md
-        "
+                    bg-success/10 text-success
+                    mb-8 flex w-fit items-center justify-center rounded-md p-3
+                "
             >
                 <Icon
                     className="h-6 w-6"
