@@ -1,4 +1,5 @@
-import StatsSection from '@/components/HowItWorksPage/StatsSection';
+import OurStorySection from '@/components/AboutPage/OurStorySection';
+import StatsSection from '@/components/AboutPage/StatsSection';
 import PageHero from '@/components/Ui/PageHero';
 
 const AboutPage = () => {
@@ -10,6 +11,7 @@ const AboutPage = () => {
                 bottomPaddingClassName="pb-52 md:pb-52"
             />
             <StatsSection />
+            <OurStorySection />
         </div>
     )
 }
