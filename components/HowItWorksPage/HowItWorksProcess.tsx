@@ -4,7 +4,7 @@ import steps from "@/data/stepsData";
 
 const HowItWorks = () => {
     return (
-        <section className="bg-surface py-20 lg:py-28">
+        <section className="py-20 lg:py-28">
             <Container>
 
                 {/* Timeline */}
@@ -19,9 +19,8 @@ const HowItWorks = () => {
                             return (
                                 <div
                                     key={step.id}
-                                    className={`relative grid items-center md:gap-10 lg:grid-cols-2 ${
-                                        index === 0 ? "lg:-mt-48" : ""
-                                    }`}
+                                    className={`relative grid items-center md:gap-10 lg:grid-cols-2 ${index === 0 ? "lg:-mt-48" : ""
+                                        }`}
                                 >
                                     {/* Timeline Number */}
                                     <div className="absolute left-1/2 top-1/2 z-20 hidden h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-success text-3xl font-bold text-white shadow-xl lg:flex">
