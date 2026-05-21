@@ -109,10 +109,6 @@ const JourneyTimelineSection = () => {
 export default JourneyTimelineSection;
 
 
-
-
-
-
 interface JourneyCardProps {
     year: string;
     title: string;

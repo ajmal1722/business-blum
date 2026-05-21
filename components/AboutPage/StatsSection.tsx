@@ -25,7 +25,7 @@ const stats = [
 
 const StatsSection = () => {
     return (
-        <section className="relative z-20 -mt-24 pb-20 lg:-mt-36 lg:pb-28">
+        <section className="relative z-20 -mt-24 pb-20 lg:-mt-28 lg:pb-24">
             <Container>
                 <div className="rounded-3xl bg-white p-8 shadow-lg lg:p-12">
                     <div className="grid gap-10 text-center md:grid-cols-2 xl:grid-cols-4">
