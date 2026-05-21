@@ -1,3 +1,4 @@
+import ContactFormSection from "@/components/ContactPage/ContactFormSection";
 import ContactSection from "@/components/ContactPage/ContactSection";
 import PageHero from "@/components/Ui/PageHero";
 
@@ -10,6 +11,7 @@ const page = () => {
                 bottomPaddingClassName="pb-52 md:pb-64"
             />
             <ContactSection />
+            <ContactFormSection />
         </div>
     )
 }
