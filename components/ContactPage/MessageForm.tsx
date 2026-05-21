@@ -12,10 +12,10 @@ const MessageForm = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
+
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries()) as Record<string, string>;
-        
+
         const newErrors: Record<string, string> = {};
         if (!data.firstName?.trim()) newErrors.firstName = "First name is required";
         if (!data.lastName?.trim()) newErrors.lastName = "Last name is required";
@@ -31,7 +31,7 @@ const MessageForm = () => {
 
         setErrors({});
         setIsSubmitting(true);
-        
+
         // Log to console as requested
         console.log("Form Submitted Successfully:", data);
 
@@ -39,7 +39,7 @@ const MessageForm = () => {
         setTimeout(() => {
             setIsSubmitting(false);
             (e.target as HTMLFormElement).reset();
-            
+
             // Fire toast
             toast.success("Message Sent! We'll get back to you soon.", {
                 style: {
@@ -56,6 +56,19 @@ const MessageForm = () => {
         }, 1500);
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLFormElement>) => {
+        const target = e.target;
+        const name = target.name;
+
+        if (name && errors[name]) {
+            setErrors((prev) => {
+                const newErrors = { ...prev };
+                delete newErrors[name];
+                return newErrors;
+            });
+        }
+    };
+
     return (
         <div className="relative rounded-3xl bg-white p-8 shadow-lg lg:p-12 border border-border overflow-hidden">
             {/* Top Accent */}
@@ -67,7 +80,12 @@ const MessageForm = () => {
             </h2>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="mt-10 space-y-7" noValidate>
+            <form
+                onSubmit={handleSubmit}
+                onChange={handleChange}
+                className="mt-10 space-y-7"
+                noValidate
+            >
                 {/* Row 1 */}
                 <div className="grid gap-6 md:grid-cols-2">
                     <FormField
@@ -121,16 +139,15 @@ const MessageForm = () => {
                         name="message"
                         rows={7}
                         placeholder="Tell us more about your needs..."
-                        className={`border-border placeholder:text-muted focus:border-success focus:ring-success/20 w-full rounded-2xl border bg-transparent px-6 py-5 text-lg outline-none transition focus:ring-2 ${
-                            errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500/20" : ""
-                        }`}
+                        className={`border-border placeholder:text-muted focus:border-success focus:ring-success/20 w-full rounded-2xl border bg-transparent px-6 py-5 text-lg outline-none transition focus:ring-2 ${errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500/20" : ""
+                            }`}
                     />
                     {errors.message && <p className="text-red-500 text-sm mt-1.5 font-medium">{errors.message}</p>}
                 </div>
 
                 {/* Button */}
-                <Button 
-                    type="submit" 
+                <Button
+                    type="submit"
                     disabled={isSubmitting}
                     className="flex w-full items-center justify-center gap-3 rounded-2xl py-5 text-xl font-semibold shadow-lg disabled:opacity-70 transition-all"
                 >
