@@ -1,5 +1,6 @@
 import Container from "@/components/Ui/Container";
 import Button from "@/components/Ui/Button";
+import FormField from "@/components/Ui/FormField";
 
 import {
     Clock3,
@@ -159,29 +160,3 @@ const ContactFormSection = () => {
 };
 
 export default ContactFormSection;
-
-interface FormFieldProps {
-    label: string;
-    placeholder: string;
-    type?: string;
-}
-
-const FormField = ({
-    label,
-    placeholder,
-    type = "text",
-}: FormFieldProps) => {
-    return (
-        <div>
-            <label className="text-secondary mb-3 block font-bold">
-                {label}
-            </label>
-
-            <input
-                type={type}
-                placeholder={placeholder}
-                className="border-border placeholder:text-muted focus:border-success py-3 w-full rounded-md border bg-transparent px-6 text-lg outline-none transition"
-            />
-        </div>
-    );
-};
