@@ -1,5 +1,6 @@
 import ContactFormSection from "@/components/ContactPage/ContactFormSection";
 import ContactSection from "@/components/ContactPage/ContactSection";
+import LocationsSection from "@/components/ContactPage/LocationSection";
 import PageHero from "@/components/Ui/PageHero";
 
 const page = () => {
@@ -12,6 +13,7 @@ const page = () => {
             />
             <ContactSection />
             <ContactFormSection />
+            <LocationsSection />
         </div>
     )
 }

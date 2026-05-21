@@ -131,7 +131,7 @@ const ContactFormSection = () => {
                         </div>
 
                         {/* FAQ Card */}
-                        <div className="rounded-3xl bg-white p-8 shadow-lg">
+                        <div className="rounded-3xl bg-white p-8 shadow-lg border border-border">
                             <CircleHelp className="size-11 text-success mb-5" />
 
                             <h3 className="text-secondary text-2xl font-extrabold">
