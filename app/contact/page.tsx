@@ -1,3 +1,4 @@
+import ContactSection from "@/components/ContactPage/ContactSection";
 import PageHero from "@/components/Ui/PageHero";
 
 const page = () => {
@@ -6,7 +7,9 @@ const page = () => {
             <PageHero
                 title='Get in Touch'
                 description='Have questions? Our team is here to help you find the right loan solution'
+                bottomPaddingClassName="pb-52 md:pb-64"
             />
+            <ContactSection />
         </div>
     )
 }
