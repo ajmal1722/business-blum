@@ -13,6 +13,7 @@ interface PageHeroProps {
     stats?: HeroStat[];
     className?: string;
     contentClassName?: string;
+    bottomPaddingClassName?: string;
 }
 
 const PageHero = ({
@@ -21,11 +22,13 @@ const PageHero = ({
     stats,
     className,
     contentClassName,
+    bottomPaddingClassName,
 }: PageHeroProps) => {
     return (
         <section
             className={cn(
-                "relative overflow-hidden bg-[#020817] py-24 md:py-32 mt-12",
+                "relative overflow-hidden bg-[#020817] pt-24 pb-32 md:pt-32 md:pb-40 mt-12",
+                bottomPaddingClassName,
                 className
             )}
         >
