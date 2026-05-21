@@ -1,8 +1,8 @@
 import HowItWorks from '@/components/HowItWorksPage/HowItWorksProcess';
 import WhyBusinessBlum from '@/components/HowItWorksPage/WhyBusinessBlum';
-import PageHero from '@/components/Shared/PageHero';
+import PageHero from '@/components/Ui/PageHero';
 import FAQSection from '@/components/HowItWorksPage/FAQSection';
-import PageCTA from '@/components/Shared/PageCTA';
+import PageCTA from '@/components/Ui/PageCTA';
 
 const page = () => {
     return (

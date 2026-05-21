@@ -1,4 +1,4 @@
-import PageHero from '@/components/Shared/PageHero';
+import PageHero from '@/components/Ui/PageHero';
 
 const AboutPage = () => {
     return (

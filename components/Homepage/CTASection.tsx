@@ -1,4 +1,4 @@
-import PageCTA from "../Shared/PageCTA";
+import PageCTA from "../Ui/PageCTA";
 import {
     CircleCheckBig,
     Shield,
