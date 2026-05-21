@@ -14,7 +14,7 @@ const navItems: NavItems[] = [
     },
     {
         label: "Success Stories",
-        href: "/success-stories",
+        href: "/",
     },
     {
         label: "About",

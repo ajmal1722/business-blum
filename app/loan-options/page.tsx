@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
+
 import LoanGuideSection from "@/components/LoanOptionsPage/LoanGuideSection"
+
+export const metadata: Metadata = {
+    title: "Loan Options | Business Blum",
+    description: "Explore the different business funding options and find the perfect loan for your needs.",
+};
 import LoanListing from "@/components/LoanOptionsPage/LoanListing"
 import PageCTA from "@/components/Ui/PageCTA"
 import PageHero from "@/components/Ui/PageHero"

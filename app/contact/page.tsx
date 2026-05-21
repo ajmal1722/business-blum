@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
+
 import ContactFormSection from "@/components/ContactPage/ContactFormSection";
+
+export const metadata: Metadata = {
+    title: "Contact Us | Business Blum",
+    description: "Get in touch with the Business Blum team for any questions or support.",
+};
 import ContactSection from "@/components/ContactPage/ContactSection";
 import LocationsSection from "@/components/ContactPage/LocationSection";
 import PageHero from "@/components/Ui/PageHero";

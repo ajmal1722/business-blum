@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
+
 import HowItWorks from '@/components/HowItWorksPage/HowItWorksProcess';
+
+export const metadata: Metadata = {
+    title: "How It Works | Business Blum",
+    description: "Discover how our smart technology matches you with the right business lenders in three simple steps.",
+};
 import WhyBusinessBlum from '@/components/HowItWorksPage/WhyBusinessBlum';
 import PageHero from '@/components/Ui/PageHero';
 import FAQSection from '@/components/HowItWorksPage/FAQSection';
