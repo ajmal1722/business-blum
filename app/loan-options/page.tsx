@@ -1,3 +1,4 @@
+import LoanListing from "@/components/LoanOptionsPage/LoanListing"
 import PageHero from "@/components/Shared/PageHero"
 
 const page = () => {
@@ -12,7 +13,7 @@ const page = () => {
                     { label: "24-Hour Matching" },
                 ]}
             />
-
+            <LoanListing />
         </div>
     )
 }
