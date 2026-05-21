@@ -5,7 +5,7 @@ interface WhyCooseFeaturesCardProps {
     description: string;
 }
 
-const WhyCooseFeaturesCard = ({ icon: Icon, title, description }: WhyCooseFeaturesCardProps) => {
+const FeaturesCard = ({ icon: Icon, title, description }: WhyCooseFeaturesCardProps) => {
     return (
         <div
             className="border-border group relative overflow-hidden rounded-lg border bg-background p-8 shadow-sm hover:shadow-lg"
@@ -34,4 +34,4 @@ const WhyCooseFeaturesCard = ({ icon: Icon, title, description }: WhyCooseFeatur
     )
 }
 
-export default WhyCooseFeaturesCard;
+export default FeaturesCard;

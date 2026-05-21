@@ -4,7 +4,7 @@ import WhyChooseImageContainer from "./WhyChoseImageContainer";
 import image1 from "@/assets/images/homepage/why-choose-1.jpg";
 import image2 from "@/assets/images/homepage/why-choose-2.jpg";
 import features from "@/data/featuresData";
-import WhyCooseFeaturesCard from "./WhyCooseFeaturesCard";
+import WhyCooseFeaturesCard from "../Ui/FeaturesCard";
 
 import { Star } from "lucide-react";
 

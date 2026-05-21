@@ -1,3 +1,4 @@
+import CoreValues from '@/components/AboutPage/CoreValues';
 import JourneyTimelineSection from '@/components/AboutPage/JourneyTimelineSection';
 import LeadershipTeamSection from '@/components/AboutPage/LeaderShipTeamSection';
 import OurStorySection from '@/components/AboutPage/OurStorySection';
@@ -16,6 +17,7 @@ const AboutPage = () => {
             <OurStorySection />
             <JourneyTimelineSection />
             <LeadershipTeamSection />
+            <CoreValues />
         </div>
     )
 }
