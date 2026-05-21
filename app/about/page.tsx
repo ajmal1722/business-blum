@@ -1,3 +1,4 @@
+import JourneyTimelineSection from '@/components/AboutPage/JourneyTimelineSection';
 import OurStorySection from '@/components/AboutPage/OurStorySection';
 import StatsSection from '@/components/AboutPage/StatsSection';
 import PageHero from '@/components/Ui/PageHero';
@@ -12,6 +13,7 @@ const AboutPage = () => {
             />
             <StatsSection />
             <OurStorySection />
+            <JourneyTimelineSection />
         </div>
     )
 }
