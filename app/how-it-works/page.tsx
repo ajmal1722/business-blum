@@ -1,4 +1,4 @@
-import HowItWorks from '@/components/HowItWorksPage/HowItWorks';
+import HowItWorks from '@/components/HowItWorksPage/HowItWorksProcess';
 import PageHero from '@/components/Shared/PageHero';
 
 const page = () => {

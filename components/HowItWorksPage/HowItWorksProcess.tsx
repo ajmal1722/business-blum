@@ -1,5 +1,5 @@
 import Container from "@/components/Ui/Container";
-import { CircleCheckBig } from "lucide-react";
+import { CircleCheckBig, LucideIcon } from "lucide-react";
 import steps from "@/data/stepsData";
 
 const HowItWorks = () => {
@@ -14,14 +14,14 @@ const HowItWorks = () => {
 
                     <div className="space-y-14 lg:space-y-24">
                         {steps.map((step, index) => {
-                            const Icon = step.icon;
                             const isEven = index % 2 === 1;
 
                             return (
                                 <div
                                     key={step.id}
-                                    className={`relative grid items-center md:gap-10 lg:grid-cols-2 ${index === 0 ? "lg:-mt-48" : ""
-                                        }`}
+                                    className={`relative grid items-center md:gap-10 lg:grid-cols-2 ${
+                                        index === 0 ? "lg:-mt-48" : ""
+                                    }`}
                                 >
                                     {/* Timeline Number */}
                                     <div className="absolute left-1/2 top-1/2 z-20 hidden h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-success text-3xl font-bold text-white shadow-xl lg:flex">
@@ -36,37 +36,12 @@ const HowItWorks = () => {
                                                 : "lg:pr-12"
                                         }
                                     >
-                                        <div className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-md lg:p-12">
-                                            {/* Icon */}
-                                            <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-lg bg-success/10">
-                                                <Icon className="size-10 text-success" />
-                                            </div>
-
-                                            {/* Content */}
-                                            <h3 className="text-secondary text-3xl font-extrabold">
-                                                {step.title}
-                                            </h3>
-
-                                            <p className="text-muted mt-6 text-xl leading-relaxed">
-                                                {step.description}
-                                            </p>
-
-                                            {/* Points */}
-                                            <ul className="mt-8 space-y-5">
-                                                {step.points.map((point) => (
-                                                    <li
-                                                        key={point}
-                                                        className="flex items-center gap-4"
-                                                    >
-                                                        <CircleCheckBig className="size-6 text-success" />
-
-                                                        <span className="text-muted text-lg">
-                                                            {point}
-                                                        </span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                        <HowItWorksCard
+                                            icon={step.icon}
+                                            title={step.title}
+                                            description={step.description}
+                                            points={step.points}
+                                        />
                                     </div>
 
                                     {/* Empty Column */}
@@ -88,3 +63,52 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+
+
+interface HowItWorksCardProps {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+    points: string[];
+}
+
+const HowItWorksCard = ({
+    icon: Icon,
+    title,
+    description,
+    points,
+}: HowItWorksCardProps) => {
+    return (
+        <div className="rounded-3xl bg-white p-8 shadow-lg transition hover:shadow-md lg:p-12">
+            {/* Icon */}
+            <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-lg bg-success/10">
+                <Icon className="size-10 text-success" />
+            </div>
+
+            {/* Content */}
+            <h3 className="text-secondary text-3xl font-extrabold">
+                {title}
+            </h3>
+
+            <p className="text-muted mt-6 text-xl leading-relaxed">
+                {description}
+            </p>
+
+            {/* Points */}
+            <ul className="mt-8 space-y-5">
+                {points.map((point) => (
+                    <li
+                        key={point}
+                        className="flex items-center gap-4"
+                    >
+                        <CircleCheckBig className="size-6 text-success" />
+
+                        <span className="text-muted text-lg">
+                            {point}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
