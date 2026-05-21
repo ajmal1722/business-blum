@@ -1,6 +1,7 @@
 import HowItWorks from '@/components/HowItWorksPage/HowItWorksProcess';
 import WhyBusinessBlum from '@/components/HowItWorksPage/WhyBusinessBlum';
 import PageHero from '@/components/Shared/PageHero';
+import FAQSection from '@/components/HowItWorksPage/FAQSection';
 
 const page = () => {
     return (
@@ -11,6 +12,7 @@ const page = () => {
             />
             <HowItWorks />
             <WhyBusinessBlum />
+            <FAQSection />
         </div>
     )
 }
