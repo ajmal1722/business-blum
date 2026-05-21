@@ -3,6 +3,8 @@ import JourneyTimelineSection from '@/components/AboutPage/JourneyTimelineSectio
 import LeadershipTeamSection from '@/components/AboutPage/LeaderShipTeamSection';
 import OurStorySection from '@/components/AboutPage/OurStorySection';
 import StatsSection from '@/components/AboutPage/StatsSection';
+import WhatMakesUsDifferent from '@/components/AboutPage/WhatMakesUsDifferent';
+import PageCTA from '@/components/Ui/PageCTA';
 import PageHero from '@/components/Ui/PageHero';
 
 const AboutPage = () => {
@@ -18,6 +20,12 @@ const AboutPage = () => {
             <JourneyTimelineSection />
             <LeadershipTeamSection />
             <CoreValues />
+            <WhatMakesUsDifferent />
+            <PageCTA 
+                title="Join 50,000+ Businesses We've Helped"
+                description="Experience the Business Blum difference. Apply now and get matched with the right lenders for your business."
+                buttonText="Start Your Application"
+            />
         </div>
     )
 }
