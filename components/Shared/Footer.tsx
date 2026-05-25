@@ -68,16 +68,16 @@ const Footer = () => {
 
                     {/* Loan Options */}
                     <div>
-                        <h3 className="mb-6 text-lg text-gray-400 font-semibold">
+                        <h3 className="mb-4 text-gray-200 font-semibold">
                             Loan Options
                         </h3>
 
-                        <ul className="space-y-5">
+                        <ul className="space-y-3 text-sm text-gray-300">
                             {loanOptions.map((item) => (
                                 <li key={item}>
                                     <Link
                                         href="/"
-                                        className="text-base text-gray-500 transition hover:text-success"
+                                        className="transition hover:text-success"
                                     >
                                         {item}
                                     </Link>
@@ -88,16 +88,16 @@ const Footer = () => {
 
                     {/* Company */}
                     <div>
-                        <h3 className="mb-6 text-lg text-gray-400 font-semibold">
+                        <h3 className="mb-4 text-gray-200 font-semibold">
                             Company
                         </h3>
 
-                        <ul className="space-y-5">
+                        <ul className="space-y-3 text-gray-300 text-sm">
                             {navItems.map((item) => (
                                 <li key={item.label}>
                                     <Link
                                         href={item.href}
-                                        className="text-base text-gray-500 transition hover:text-success"
+                                        className=" transition hover:text-success"
                                     >
                                         {item.label}
                                     </Link>
@@ -108,43 +108,43 @@ const Footer = () => {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="mb-6 text-lg text-gray-400 font-semibold">
+                        <h3 className="mb-4 text-gray-200 font-semibold">
                             Contact Us
                         </h3>
 
-                        <div className="space-y-6">
+                        <div className="space-y-3 text-gray-300 text-sm">
                             {/* Phone */}
-                            <div className="flex items-start gap-4">
-                                <Phone className="mt-1 size-6 text-success" />
+                            <div className="flex items-start gap-2">
+                                <Phone className="mt-1 size-5 text-success" />
 
                                 <div>
                                     <p className=" font-medium">
                                         (800) 555-BLUM
                                     </p>
 
-                                    <p className="mt-1 text-sm text-gray-500">
+                                    <p className="text-xs text-gray-500">
                                         Mon-Fri 8am-8pm EST
                                     </p>
                                 </div>
                             </div>
 
                             {/* Email */}
-                            <div className="flex items-start gap-4">
-                                <Mail className="mt-1 size-6 text-success" />
+                            <div className="flex items-start gap-2">
+                                <Mail className="mt-1 size-5 text-success" />
 
                                 <div>
-                                    <p className="text-base text-gray-500">
+                                    <p className="text-base">
                                         hello@businessblum.com
                                     </p>
                                 </div>
                             </div>
 
                             {/* Address */}
-                            <div className="flex items-start gap-4">
-                                <MapPin className="mt-1 size-6 text-success" />
+                            <div className="flex items-start gap-2">
+                                <MapPin className="mt-1 size-5 text-success" />
 
                                 <div>
-                                    <p className="text-base leading-8 text-gray-500">
+                                    <p className="text-base">
                                         123 Financial Blvd
                                         <br />
                                         New York, NY 10001
@@ -160,16 +160,16 @@ const Footer = () => {
             <div className="border-t border-white/10">
                 <Container>
                     <div className="flex flex-col items-center justify-between gap-6 py-8 text-center md:flex-row md:text-left">
-                        <p className="text-base text-gray-500">
+                        <p className="text-sm text-gray-500">
                             © 2026 Business Blum. All rights reserved.
                         </p>
 
-                        <div className="flex flex-wrap items-center justify-center md:gap-8 gap-4">
+                        <div className="flex flex-wrap items-center justify-center md:gap-6 gap-4 text-sm">
                             {legalLinks.map((item) => (
                                 <Link
                                     key={item}
                                     href="/"
-                                    className="text-base text-gray-500 transition hover:text-success"
+                                    className="text-gray-500 transition hover:text-success"
                                 >
                                     {item}
                                 </Link>

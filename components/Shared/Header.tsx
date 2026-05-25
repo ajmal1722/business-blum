@@ -57,7 +57,7 @@ const Header = () => {
                     aria-label="Main navigation"
                     className="hidden lg:block"
                 >
-                    <ul className="flex items-center gap-8">
+                    <ul className="flex items-center gap-7">
                         {navItems.map((item) => {
                             const isActive =
                                 pathname === item.href;
@@ -67,7 +67,7 @@ const Header = () => {
                                     <Link
                                         href={item.href}
                                         className={`
-                                            relative pb-2 transition-colors
+                                            relative pb-3 transition-colors text-sm font-semibold
                                             ${isActive
                                                 ? "text-success"
                                                 : "hover:text-success"
