@@ -72,14 +72,16 @@ const Hero = () => {
                     </div>
 
                     {/* Feature Cards */}
-                    <div className="pt-12 mt-16 grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-3 border-t border-border">
-                        {cardDetails.map((card) => (
-                            <SingleCard
-                                key={card.title}
-                                title={card.title}
-                                description={card.description}
-                            />
-                        ))}
+                    <div className="w-full max-w-6xl mx-auto pt-8 mt-16 border-t border-border">
+                        <div className="flex flex-col items-center justify-center gap-6 lg:gap-10 md:flex-row">
+                            {cardDetails.map((card) => (
+                                <SingleCard
+                                    key={card.title}
+                                    title={card.title}
+                                    description={card.description}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </Container>
@@ -99,20 +101,20 @@ const SingleCard = ({
     description,
 }: SingleCardProps) => {
     return (
-        <div className="flex items-start gap-4 p-6 ">
+        <div className="flex items-start gap-3">
             <div className="bg-success rounded-full p-3 text-white">
                 <CircleCheckBig
                     className="h-6 w-6"
-                    strokeWidth={2.5}
+                    strokeWidth={3}
                 />
             </div>
 
             <div className="text-left">
-                <h4 className="text-xl font-semibold">
+                <h4 className="text-lg font-bold text-secondary">
                     {title}
                 </h4>
 
-                <p className="text-muted mt-1">
+                <p className="text-muted text-sm">
                     {description}
                 </p>
             </div>
