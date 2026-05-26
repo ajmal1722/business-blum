@@ -53,7 +53,7 @@ const Hero = () => {
                     <div className="mt-10 flex flex-col gap-4 sm:flex-row text-lg font-semibold">
                         <Button
                             href="/apply"
-                            className="flex items-center justify-center gap-2 px-8 py-4 hover:scale-105"
+                            className="flex items-center justify-center gap-2 px-8 py-4 hover:scale-105 lg:px-14 lg:py-6 text-xl font-bold"
                         >
                             Get Started Now
 
@@ -65,7 +65,7 @@ const Hero = () => {
 
                         <Button
                             href="how-it-works"
-                            className="bg-secondary px-8 py-4 hover:scale-105"
+                            className="bg-secondary px-8 py-4 lg:px-16 lg:py-6 text-xl font-bold hover:scale-105"
                         >
                             See How It Works
                         </Button>

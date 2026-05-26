@@ -1,7 +1,7 @@
 import Container from "@/components/Ui/Container";
 import SectionHeading from "@/components/Ui/SectionHeading";
 import { cn } from "@/lib/utils";
-import { CheckCircle2 } from "lucide-react";
+import { CircleCheckBig } from "lucide-react";
 
 interface HeroStat {
     label: string;
@@ -52,15 +52,15 @@ const PageHero = ({
 
                     {/* Optional Bottom Stats */}
                     {stats && stats.length > 0 && (
-                        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+                        <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
                             {stats.map((item, index) => (
                                 <div
                                     key={index}
                                     className="flex items-center gap-3"
                                 >
-                                    <CheckCircle2 className="size-7 text-success" />
+                                    <CircleCheckBig className="size-6 text-success" strokeWidth={2.5} />
 
-                                    <span className="text-base font-semibold text-white md:text-xl">
+                                    <span className="text-base font-semibold text-white ">
                                         {item.label}
                                     </span>
                                 </div>

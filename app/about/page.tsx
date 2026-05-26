@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     title: "About Us | Business Blum",
     description: "Learn more about Business Blum and our mission to help businesses grow.",
 };
+
 import JourneyTimelineSection from '@/components/AboutPage/JourneyTimelineSection';
 import LeadershipTeamSection from '@/components/AboutPage/LeaderShipTeamSection';
 import OurStorySection from '@/components/AboutPage/OurStorySection';

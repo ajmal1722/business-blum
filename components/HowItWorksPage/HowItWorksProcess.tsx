@@ -94,15 +94,15 @@ const HowItWorksCard = ({
             </p>
 
             {/* Points */}
-            <ul className="mt-8 space-y-5">
+            <ul className="mt-8 space-y-3">
                 {points.map((point) => (
                     <li
                         key={point}
                         className="flex items-center gap-4"
                     >
-                        <CircleCheckBig className="size-6 text-success" />
+                        <CircleCheckBig className="size-5 text-success" />
 
-                        <span className="text-muted text-lg">
+                        <span className="text-muted">
                             {point}
                         </span>
                     </li>

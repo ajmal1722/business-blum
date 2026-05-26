@@ -29,7 +29,7 @@ const WhyChoose = () => {
         <section className="bg-surface py-28">
             <Container>
                 {/* Top Accent Line */}
-                <div className="bg-success mb-10 h-2 w-full rounded-full" />
+                <div className="bg-success h-2 w-full rounded-full" />
 
                 {/* Heading */}
                 <SectionHeading
